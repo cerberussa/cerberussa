@@ -1,0 +1,19 @@
+graph TD
+    A[User (Telegram / WhatsApp)] --> B[Assistant Bot]
+    B --> C{Service?}
+    C --> R[RideBuddy Agent]
+    C --> H[HouseScout Agent]
+    C --> E[Errands Agent]
+    C --> CL[Cleaning Agent]
+    C --> CU[Custom Request]
+
+    R --> G[LangGraph Flow]
+    H --> G
+    E --> G
+    CL --> G
+    CU --> G
+
+    G --> CAL[📅 Calendar Sync]
+    G --> LOG[🧾 Booking Logger]
+    G --> ALERT[📨 Email/Telegram Alert]
+    G --> UI[📊 Dashboard View]
